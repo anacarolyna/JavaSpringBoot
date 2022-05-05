@@ -1,4 +1,4 @@
-package com.generation.farmacia.controller;
+package com.generation.lojadegames.controller;
 
 import java.util.List;
 
@@ -17,13 +17,15 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.generation.farmacia.model.Produto;
-import com.generation.farmacia.repository.ProdutoRepository;
+import com.generation.lojadegames.model.Produto;
+import com.generation.lojadegames.repository.ProdutoRepository;
+
 
 @RestController
 @RequestMapping ("/produto")
 @CrossOrigin("*")
 public class ProdutoController {
+	
 	@Autowired
 	private ProdutoRepository repository;
 	
@@ -60,5 +62,5 @@ public class ProdutoController {
 	public void delete(@PathVariable Long id) {
 		repository.deleteById(id);
 	}
-	
+
 }
