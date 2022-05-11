@@ -31,6 +31,10 @@ public class Produto {
 	@Positive
 	public double valor;
     
+    @ManyToOne
+	@JsonIgnoreProperties("produto")
+	private Usuario usuario;
+    
     @NotNull 
 	@ManyToOne
 	@JsonIgnoreProperties("produto")
